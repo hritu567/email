@@ -1,2 +1,9 @@
 #!/bin/bash -x
-echo "Welcome to email"
+read -p "enter the email " mail
+pat='^[a-zA-Z0-9]+$'
+if [[ $pat =~ $mail ]]
+then
+ echo "yes"
+else
+ echo "no"
+fi
